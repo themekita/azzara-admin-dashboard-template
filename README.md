@@ -1,4 +1,7 @@
 # Azzara Admin Dashboard Template
+
+![](http://themekita.com/assets/images/azzarathumb.png)
+
 Free Bootstrap 4 Admin Dashboard
 
 Azzara is a beautiful and elegant Bootstrap 4 admin dashboard designed to manage and visualize data about your business. It combines easy colors on the eyes, wide cards, beautiful typography, and graphics.
