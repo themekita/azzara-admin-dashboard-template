@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Gmaps | Azzara Bootstrap Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="../../assets/img/icon.ico" type="image/x-icon"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- Fonts and icons -->
+	<script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Open+Sans:300,400,600,700"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['../../assets/css/fonts.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/azzara.min.css">
+	<link href="../assets/styles.css" rel="stylesheet" />
+	<link href="../assets/prism.css" rel="stylesheet" />
+</head>
+<body>
+	<style>
+	.map-demo {
+		height: 300px !important;
+	}
+</style>
+<div class="wrapper">
+	<!--
+				Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
+		-->
+		<div class="main-header" data-background-color="purple">
+			<div class="logo-header">
+				<a href="../index.html" class="logo">
+					<img src="../../assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="fa fa-bars"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="fa fa-ellipsis-v"></i></button>
+				<div class="navbar-minimize">
+					<button class="btn btn-minimize btn-rounded">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item">
+							<a href="../../examples/" class="nav-link">
+								Live Preview
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	<div class="sidebar">
+		<div class="sidebar-background"></div>
+		<div class="sidebar-wrapper scrollbar-inner">
+			<div class="sidebar-content">
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="../index.html">
+							<i class="flaticon-home"></i>
+							<p>Introduction</p>
+							<span class="badge badge-count">5</span>
+						</a>
+					</li>
+					<li class="nav-section">
+						<span class="sidebar-mini-icon">
+							<i class="fa fa-ellipsis-h"></i>
+						</span>
+						<h4 class="text-section">Components</h4>
+					</li>
+					<li class="nav-item">
+						<a href="../components/alerts.html">
+							<span class="letter-icon">A</span>
+							<p>Alerts</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/badge.html">
+							<span class="letter-icon">Ba</span>
+							<p>Badge</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/breadcrumb.html">
+							<span class="letter-icon">Bc</span>
+							<p>Breadcrumb</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/buttons.html">
+							<span class="letter-icon">Bt</span>
+							<p>Buttons</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/card.html">
+							<span class="letter-icon">C</span>
+							<p>Card</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/collapse.html">
+							<span class="letter-icon">Co</span>
+							<p>Collapse</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/colors.html">
+							<span class="letter-icon">Cl</span>
+							<p>Colors</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/dropdowns.html">
+							<span class="letter-icon">D</span>
+							<p>Dropdowns</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/forms.html">
+							<span class="letter-icon">F</span>
+							<p>Forms</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/modal.html">
+							<span class="letter-icon">M</span>
+							<p>Modal</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/navs.html">
+							<span class="letter-icon">N</span>
+							<p>Navs</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/navbar.html">
+							<span class="letter-icon">Nb</span>
+							<p>Navbar</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/pagination.html">
+							<span class="letter-icon">Pa</span>
+							<p>Pagination</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/popovers.html">
+							<span class="letter-icon">Po</span>
+							<p>Popovers</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/progress.html">
+							<span class="letter-icon">Pr</span>
+							<p>Progress</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/tables.html">
+							<span class="letter-icon">T</span>
+							<p>Tables</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/tooltips.html">
+							<span class="letter-icon">To</span>
+							<p>Tooltips</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../components/typography.html">
+							<span class="letter-icon">Ty</span>
+							<p>Typography</p>
+						</a>
+					</li>
+
+					<li class="nav-section">
+						<span class="sidebar-mini-icon">
+							<i class="fa fa-ellipsis-h"></i>
+						</span>
+						<h4 class="text-section">Plugins</h4>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/chart.html">
+							<span class="letter-icon">C</span>
+							<p>Chart.js</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/chartcircle.html">
+							<span class="letter-icon">Cc</span>
+							<p>Chart Circle</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/animate.html">
+							<span class="letter-icon">Cs</span>
+							<p>CSS Animate</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/datatables.html">
+							<span class="letter-icon">Da</span>
+							<p>Datatables</p>
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a href="../plugins/gmaps.html">
+							<span class="letter-icon">G</span>
+							<p>Google Maps</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/jqvmap.html">
+							<span class="letter-icon">Jm</span>
+							<p>JQVmap</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/scrollbar.html">
+							<span class="letter-icon">Js</span>
+							<p>Jquery Scrollbar</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/notify.html">
+							<span class="letter-icon">N</span>
+							<p>Notify</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/slider.html">
+							<span class="letter-icon">Sl</span>
+							<p>Slider</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/sweetalert.html">
+							<span class="letter-icon">Sa</span>
+							<p>Sweet Alert</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../plugins/switch.html">
+							<span class="letter-icon">Sw</span>
+							<p>Switch</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-panel">
+		<div class="content content-documentation">
+			<div class="container-fluid">
+				<div class="card card-documentation">
+					<div class="card-header bg-secondary text-white">
+						<h4>Google Maps</h4>
+						<p class="mb-0"><a href="https://hpneo.github.io/gmaps/">gmaps.js</a> allows you to use the potential of Google Maps in a simple way. Read <a href="https://hpneo.github.io/gmaps/">Full Documentation</a>.</p>
+					</div>
+					<div class="card-body">
+						<div class="table-content">
+							<span class="title">Table of Content</span>
+							<ul>
+								<li>
+									<a href="#examples">Examples</a>
+									<ol>
+										<li>
+											<a href="#basic">Basic Map</a>
+										</li>
+										<li>
+											<a href="#markers">Markers</a>
+										</li>
+										<li>
+											<a href="#polygons">Polygons</a>
+										</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+						<h4 class="subcontent-title" id="examples">
+							<span>
+								Examples
+							</span>
+						</h4>
+						<h5 id="basic">Basic Map</h5>
+						<div class="bd-example">
+							<div id="map-basic" style="height: 300px !important"></div>
+						</div>
+						<pre class="language-markup">
+							<code class="language-markup">
+							&lt;div id=&quot;map-basic&quot; style=&quot;height: 300px !important&quot;&gt;&lt;/div&gt;
+						</code>
+					</pre>
+					<pre class="language-markup">
+						<code class="language-javascript">
+							var mapBasic = new GMaps({
+	div: '#map-basic',
+	lat: -12.043333,
+	lng: -77.028333
+});
+					</code>
+				</pre>
+				<h5 id="markers">Markers</h5>
+				<div class="bd-example">
+					<div id="map-markers" style="height: 300px !important"></div>
+				</div>
+				<pre class="language-markup">
+					<code class="language-markup">
+						&lt;div id=&quot;map-markers&quot; style=&quot;height: 300px !important&quot;&gt;&lt;/div&gt;
+					</code>
+				</pre>
+				<pre class="language-markup">
+					<code class="language-javascript">
+						var mapMarkers = new GMaps({
+	div: '#map-markers',
+	lat: -12.043333,
+	lng: -77.03,
+});
+
+mapMarkers.addMarker({
+	lat: -12.043333,
+	lng: -77.03,
+	title: 'Lima',
+	details: {
+		database_id: 42,
+		author: 'HPNeo'
+	},
+	click: function(e){
+		if(console.log)
+			console.log(e);
+		alert('You clicked in this marker');
+	}
+});
+	</code>
+</pre>
+<h5 id="polygons">Polygons</h5>
+<div class="bd-example">
+	<div id="map-polygons" style="height: 300px !important"></div>
+</div>
+<pre class="language-markup">
+	<code class="language-markup">
+		&lt;div id=&quot;map-polygons&quot; style=&quot;height: 300px !important&quot;&gt;&lt;/div&gt;
+	</code>
+</pre>
+<pre class="language-markup">
+	<code class="language-javascript">var mapPolygons = new GMaps({
+	div: '#map-polygons',
+	lat: -12.043333,
+	lng: -77.028333
+});
+
+var path = [[-12.040397656836609,-77.03373871559225],
+[-12.040248585302038,-77.03993927003302],
+[-12.050047116528843,-77.02448169303511],
+[-12.044804866577001,-77.02154422636042]];
+
+polygon = mapPolygons.drawPolygon({
+	paths: path,
+	strokeColor: '#BBD8E9',
+	strokeOpacity: 1,
+	strokeWeight: 3,
+	fillColor: '#BBD8E9',
+	fillOpacity: 0.6
+});
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+<script src="../../assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="../../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="../../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="../../assets/js/core/popper.min.js"></script>
+<script src="../../assets/js/core/bootstrap.min.js"></script>
+<script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
+<script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="../../assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="../../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+<script type="text/javascript" src="../../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js" charset="utf-8"></script>
+<script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
+<script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1On32WMJzaErjXZhvYcEvYDQ_5PvlMCw"
+type="text/javascript"></script>
+<script src="../../assets/js/plugin/gmaps/gmaps.js"></script>
+<script src="../../assets/js/ready.js"></script>
+<script src="../assets/prism.js"></script>
+<script src="../assets/prism-normalize-whitespace.min.js"></script>
+<script type="text/javascript">
+	// Optional
+	Prism.plugins.NormalizeWhitespace.setDefaults({
+		'remove-trailing': true,
+		'remove-indent': true,
+		'left-trim': true,
+		'right-trim': true,
+	});
+	
+	// handle links with @href started with '#' only
+	$(document).on('click', 'a[href^="#"]', function(e) {
+		// target element id
+		var id = $(this).attr('href');
+
+		// target element
+		var $id = $(id);
+		if ($id.length === 0) {
+			return;
+		}
+
+		// prevent standard hash navigation (avoid blinking in IE)
+		e.preventDefault();
+
+		// top position relative to the document
+		var pos = $id.offset().top - 80;
+
+		// animated top scrolling
+		$('body, html').animate({scrollTop: pos});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		var mapBasic = new GMaps({
+			div: '#map-basic',
+			lat: -12.043333,
+			lng: -77.028333
+		});
+
+		var mapMarkers = new GMaps({
+			div: '#map-markers',
+			lat: -12.043333,
+			lng: -77.03,
+		});
+
+		mapMarkers.addMarker({
+			lat: -12.043333,
+			lng: -77.03,
+			title: 'Lima',
+			details: {
+				database_id: 42,
+				author: 'HPNeo'
+			},
+			click: function(e){
+				if(console.log)
+					console.log(e);
+				alert('You clicked in this marker');
+			}
+		});
+
+		var mapPolygons = new GMaps({
+			div: '#map-polygons',
+			lat: -12.043333,
+			lng: -77.028333
+		});
+		var path = [[-12.040397656836609,-77.03373871559225],
+		[-12.040248585302038,-77.03993927003302],
+		[-12.050047116528843,-77.02448169303511],
+		[-12.044804866577001,-77.02154422636042]];
+
+		polygon = mapPolygons.drawPolygon({
+			paths: path,
+			strokeColor: '#BBD8E9',
+			strokeOpacity: 1,
+			strokeWeight: 3,
+			fillColor: '#BBD8E9',
+			fillOpacity: 0.6
+		});
+	})
+</script>
+</html>

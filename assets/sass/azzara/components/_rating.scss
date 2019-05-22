@@ -1,0 +1,26 @@
+.rating {
+	>label {
+		display: inline;
+		color: #e9eaeb !important;
+		line-height: 1;
+		float: right;
+		cursor: pointer;
+		&:hover {
+			color: #FFC600 !important;
+			opacity: 0.5;
+		}
+		span {
+			font-size: 18px;
+		}
+	}
+	input[type="radio"], input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+		&:checked {
+			&~label {
+				color: #FFC600 !important;
+			}
+		}
+	}
+}

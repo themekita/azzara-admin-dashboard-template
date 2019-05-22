@@ -1,0 +1,116 @@
+/*!
+
+ =========================================================
+ * Azzara Bootstrap Dashboard (Bootstrap 4)
+ =========================================================
+
+ * Product Page: http://www.themekita.com/
+ * Copyright 2018 Theme Kita (http://www.themekita.com/)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+[Table of contents]
+
+* Background
+* Typography
+* Layouts
+   + Body & Wrapper
+   + Main Header
+   + Sidebar
+* Layouts Color
+* Components
+   + Breadcrumbs
+   + Cards
+     - Card Stats
+     - Card Task
+     - Card States
+     - Card Posts
+     - Card Pricing
+     - Card Annoucement
+     - Card Profile
+     - Accordion
+   + Inputs
+   + Tables
+   + Navbars
+   + Navsearch
+   + Badges
+   + Dropdowns
+   + Charts
+   + Alerts
+   + Buttons
+   + Navtabs
+   + Popovers
+   + Progress
+   + Paginations
+   + Sliders
+   + Modals
+   + Timeline
+   + Maps
+   + Invoice
+   + Messages
+   + Tasks
+   + Settings
+* Plugins
+   + jQueryUI
+   + jQuery Scrollbar
+   + Toggle
+   + Css Animate
+   + Full Calendar
+   + SweetAlert
+   + Datatables
+   + DateTimePicker
+   + Select2
+   + Tagsinput
+   + Dropzone
+   + Summernote
+* Responsive
+* 404
+* Login & Register
+
+# [Color codes]
+
+body-text-color: #575962
+white-color: #ffffff
+black-color: #191919
+transparent-bg : transparent
+default-color : #282a3c
+primary-color : #177dff
+secondary-color : #716aca
+info-color : #36a3f7
+success-color : #35cd3a
+warning-color : #ffa534
+danger-color : #f3545d
+
+-------------------------------------------------------------------*/
+ 
+@import "azzara/variables";
+@import "azzara/background";
+@import "azzara/outlinefocus";
+@import "azzara/typography";
+
+//layouts
+@import "azzara/layouts";
+@import "azzara/layouts-colors";
+
+//icons
+// @import "azzara/font-awesome";
+// @import "azzara/flaticon";
+
+//components
+@import "azzara/components";
+
+//plugins
+@import "azzara/plugins";
+
+//responsive
+@import "azzara/responsive";
+
+//404
+@import "azzara/pagenotfound";
+
+
+//Login
+@import "azzara/login";
+

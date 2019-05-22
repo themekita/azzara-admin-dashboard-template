@@ -1,0 +1,89 @@
+/* 	 Background Body */
+body {
+	background: #f9fbfd;
+	&[data-background-color="bg1"] {
+		background: #f9fbfd;
+	}
+	&[data-background-color="bg2"] {
+		background: $white-color;
+	}
+	&[data-background-color="bg3"] {
+		background: #f1f1f1;
+	}
+}
+
+/*   Background   */
+
+.bg-default {
+	background-color: $default-color !important;
+}
+
+.bg-primary {
+	background-color: $primary-color !important;
+}
+
+.bg-secondary {
+	background-color: $secondary-color !important;
+}
+
+.bg-info {
+	background-color: $info-color !important;
+}
+
+.bg-success {
+	background-color: $success-color !important;
+}
+
+.bg-warning {
+	background-color: $warning-color !important;
+}
+
+.bg-danger {
+	background-color: $danger-color !important;
+}
+
+.bg-dark{
+	background: $black-color !important;
+}
+
+.bg-grey1 {
+	background: #f9fbfd !important;
+}
+
+.bg-grey2 {
+	background: #f1f1f1;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 2), 1) !important;
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops) !important;
+  background: linear-gradient($direction, $color-stops) !important;
+}
+
+.bg-default-gradient {
+	@include linear-gradient(-45deg, #08080e, $default-color);
+}
+
+.bg-primary-gradient {
+	@include linear-gradient(-45deg, #3641a0, $primary-color);
+}
+
+.bg-secondary-gradient {
+	@include linear-gradient(-45deg, #29276b, $secondary-color);
+}
+
+.bg-info-gradient {
+	@include linear-gradient(-45deg, #145180, $info-color);
+}
+
+.bg-success-gradient {
+	@include linear-gradient(-45deg, #0d8010, $success-color);
+}
+
+.bg-warning-gradient {
+	@include linear-gradient(-45deg, #9a6d06, $warning-color);
+}
+
+.bg-danger-gradient {
+	@include linear-gradient(-45deg, #a01d24, $danger-color);
+}

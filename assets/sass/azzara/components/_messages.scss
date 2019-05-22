@@ -1,0 +1,356 @@
+/*     	Messages Tab    */
+.tab-chat {
+	position: relative;
+}
+.messages-contact {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	transition: left .3s ease;
+}
+
+.messages-contact {
+	.contact-list {
+		.user{ 
+			a {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 11px 10px;
+				border-radius: 5px;
+				&:hover {
+					text-decoration: none;
+					background: rgba(0,0,0,0.05);
+				}
+				.user-data, .user-data2 {
+					margin-left: 20px;
+					display: flex;
+					flex-direction: column;
+					.name {
+						color: $body-text-color;
+						font-size: 13px;
+						margin-bottom: 3px;
+						font-weight: $font-weight-bold;
+					}
+					.message {
+						color: #aaa;
+					}
+					.status {
+						color: #979797;
+					}
+				}
+			}
+		}
+	}
+}
+
+.messages-wrapper{
+	position: absolute;
+	left: calc(100% + 40px);
+	transition: left .3s ease;
+}
+
+.messages-wrapper {
+	.messages-title{
+		width: 100%;
+		display: inline-block;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 15px;
+		.user{
+			width: calc(100% - 40px);
+			float: right;
+			text-align: right;
+			padding: 10px 0;
+			.name {
+				display: inline-block;
+				font-size: 13px;
+				font-weight: $font-weight-normal;
+				margin-bottom: 4px;
+			}
+			.last-active {
+				display: block;
+				font-size: 10px;
+			}
+		}
+		.return {
+			background: $transparent-bg;
+			border: 0;
+			font-size: 25px;
+			padding: 10px 0;
+			cursor: pointer;
+		}
+	}
+	.messages-body{
+		height: calc(100vh - 310px);
+		display: block;
+		overflow-y: auto;
+	}
+}
+
+.messages-wrapper .messages-body, .conversations-body {
+	.message-content-wrapper {
+		display: inline-block;
+		width: 100%;
+	}
+	.message{
+		display: table;
+		table-layout: fixed;
+		padding: 8px 0;
+	}
+	.message-in{
+		margin-right: 40px;
+		float: left;
+		.message-body{
+			display: table-cell;
+			vertical-align: top;
+			.message-content{
+				background: #f7f7f7;
+				padding: 12px 15px;
+				border-radius: 5px;
+				margin-left: 10px;
+				position: relative;
+				width: fit-content;
+				&:before{
+					width: 0;
+					height: 0;
+					border-top: 10px solid $transparent-bg;
+					border-bottom: 10px solid $transparent-bg;
+					border-right: 10px solid #f7f7f7;
+					content: '';
+					position: absolute;
+					left: -10px;
+					top: 12px;
+				}
+				.name{
+					color: #83848a;
+					font-size: 11px;
+					margin-bottom: 5px;
+				}
+				.content{
+					font-size: 13px;
+				}
+			}
+			.date {
+				margin-left: 10px;
+				margin-top: 8px;
+				font-size: 11px;
+				color: #83848a;
+				padding-left: 12px;
+			}
+			.message-content + .message-content {
+				margin-top: 10px;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.message-out{
+		float: right;
+		margin-left: 40px;
+		.message-body{
+			display: table-cell;
+			vertical-align: top;
+			float: right;
+			.message-content{
+				background: $primary-color;
+				padding: 12px 15px;
+				border-radius: 5px;
+				margin-right: 10px;
+				position: relative;
+				width: fit-content;
+				&:before{
+					width: 0;
+					height: 0;
+					border-top: 10px solid $transparent-bg;
+					border-bottom: 10px solid $transparent-bg;
+					border-left: 10px solid $primary-color;
+					content: '';
+					position: absolute;
+					right: -10px;
+					top: 12px;
+				}
+				.content{
+					font-size: 13px;
+					color: $white-color !important;
+				}
+			}
+			.date {
+				margin-right: 10px;
+				margin-top: 8px;
+				font-size: 11px;
+				color: #83848a;
+				text-align: right;
+				padding-right: 15px;
+			}
+			.message-content + .message-content {
+				margin-top: 10px;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.messages-form{
+	display: table;
+	width: 100%;
+	margin-top: 30px;
+	border-top: 1px solid #eee;
+	padding-top: 20px;
+	.messages-form-control{
+		display: table-cell;
+		padding-right: 15px;
+	}
+	.messages-form-tool{
+		display: table-cell;
+		text-align: right;
+		width: 50px;
+		.attachment{
+			height: 100%;
+			line-height: 1;
+			color: #888c91;
+			background: #e8e8e8;
+			font-size: 17px;
+			padding: 10px 12px;
+			border-radius: 50%;
+			margin-left: auto;
+		}
+	}
+}
+
+.show-chat {
+	.messages-contact {
+		left: calc(-100% - 40px);
+	}
+	.messages-wrapper {
+		left: 0px;
+	}
+}
+
+/* 		List Group Messages 	*/
+.list-group-messages {
+	.btn-dropdown {
+		background: transparent;
+		border: 0;
+		font-size: 16px;
+		color: #b5b5b5;
+		line-height: 1;
+		cursor: pointer;
+		padding: 4px 10px;
+	}
+	.list-group-item {
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+		&.unread {
+			.list-group-item-title {
+				font-weight: 600;
+			}
+		}
+	}
+	.list-group-item-title {
+		a {
+			color: $body-text-color;
+		}
+	}
+}
+
+/*      Conversations Wrapper     */
+.conversations {
+	display: flex;
+	height: calc(100vh - 57px);
+	flex-direction: column;
+	.message-header {
+		background: #fff;
+		padding: .5rem;
+		background-color: #fff;
+		box-shadow: 0 1px 0 0 rgba(61,70,79,.075);
+		z-index: 1;
+	}
+	.message-title{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		.user{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.name {
+				display: block;
+				font-size: 14px;
+				font-weight: $font-weight-bold;
+				line-height: 24px;
+				margin-bottom: 2px;
+			}
+			.last-active {
+				display: block;
+				font-size: 11px;
+			}
+		}
+		.return {
+			background: $transparent-bg;
+			border: 0;
+			font-size: 25px;
+			cursor: pointer;
+			height: 100%;
+			top: 0;
+		}
+	}
+	.conversations-body{
+		flex: 1;
+		overflow-y: auto;
+		padding: 1.5rem 2rem;
+	}
+	.conversations-content {
+		border: 1px solid #eee;
+		border-radius: 5px;
+		padding: 1rem;
+	}
+	.messages-form {
+		margin: 0;
+		padding: .7rem 1rem;
+		background: #fff;
+	}
+}
+
+.conversations-action {
+	background: #f6f6f6;
+	padding: 10px 0;
+	.action {
+		display: flex;
+		padding: 1rem 1.5rem;
+		background: #fff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+		margin-bottom: 10px;
+		cursor: pointer;
+		&:hover {
+			background: #f4f5f5;
+		}
+		span {
+			font-size: 16px;
+			line-height: 21px;
+		}
+		i {
+			font-size: 21px;
+			width: 2.5rem;
+			color: rgba(38, 50, 56, 0.5);
+		}
+		&.danger {
+			span, i {
+				color: $danger-color;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.conversations {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}

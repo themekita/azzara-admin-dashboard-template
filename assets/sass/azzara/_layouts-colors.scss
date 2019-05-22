@@ -1,0 +1,156 @@
+/*     	Customable Layouts Colors     */
+
+.main-header[data-background-color] {
+	.btn-minimize {
+		color: #fff !important;
+	}
+	.logo-header{
+		background-color: rgba(31, 30, 30, 0.12) !important;
+		.navbar-toggler {
+			.navbar-toggler-icon {
+				color: $white-color !important;
+			}
+		}
+		.more {
+			color: $white-color !important;
+		}
+	}
+	.navbar-header{
+		.nav-search{
+			.input-group {
+				border: 0;
+				background: rgba(31, 30, 30, 0.12) !important;
+				box-shadow: inset 0 1px 0 0 rgba(61, 70, 79, 0);
+				transition: all .4s;
+				.form-control {
+					color: $white-color !important;
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						opacity: 1;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						opacity: 1;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+						opacity: 1;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+						opacity: 1;
+					}
+				}
+				.search-icon {
+					color: $white-color !important;
+				}
+				&.focus {
+					background: #fff !important;
+					.form-control {
+						color: inherit !important;
+						&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							color: #bfbfbf !important;
+						}
+						&::-moz-placeholder { /* Firefox 19+ */
+							color: #bfbfbf !important;
+						}
+						&:-ms-input-placeholder { /* IE 10+ */
+							color: #bfbfbf !important;
+						}
+						&:-moz-placeholder { /* Firefox 18- */
+							color: #bfbfbf !important;
+						}
+					}
+					.search-icon {
+						color: #bfbfbf !important;
+					}
+				}
+			}
+		}
+		.navbar-nav .nav-item {
+			.nav-link {
+				color: $white-color !important;
+				&:hover, &:focus {
+					background: rgba(31, 30, 30, 0.12) !important;
+				}
+			}
+			&.active {
+				.nav-link {
+					background: rgba(31, 30, 30, 0.12) !important;
+				}
+			}
+		}
+	}
+}
+
+@mixin main-header-state-style($color) {
+	background: $color !important;
+}
+
+@mixin logo-header-state-style($color) {
+	background: $color !important;
+	&:after {
+		background: $transparent-bg !important;
+	}
+}
+
+@mixin navbar-header-state-style($color) {
+	.navbar-header {
+		background: $color !important;
+	}
+}
+
+@mixin sidebar-state-style($color, $opacity) {
+	background: $color !important;
+	.sidebar-background {
+		&:after {
+			background: $color;
+			opacity: $opacity;
+		}
+	}
+}
+
+//[data-background-color="dark"] 
+
+.main-header[data-background-color="dark"] {
+	@include main-header-state-style($default-color);
+	@include navbar-header-state-style($default-color);
+}
+
+//[data-background-color="blue"]
+
+.main-header[data-background-color="blue"] {
+	@include main-header-state-style($primary-color);
+	@include navbar-header-state-style($primary-color);
+}
+
+//[data-background-color="purple"]
+
+.main-header[data-background-color="purple"] {
+	@include main-header-state-style($secondary-color);
+	@include navbar-header-state-style($secondary-color);
+}
+
+//[data-background-color="purple"]
+
+.main-header[data-background-color="light-blue"] {
+	@include main-header-state-style($info-color);
+	@include navbar-header-state-style($info-color);
+}
+
+//[data-background-color="orange"]
+
+.main-header[data-background-color="orange"] {
+	@include main-header-state-style($warning-color);
+	@include navbar-header-state-style($warning-color);
+}
+
+//[data-background-color="green"]
+
+.main-header[data-background-color="green"] {
+	@include main-header-state-style($success-color);
+	@include navbar-header-state-style($success-color);
+}
+
+//[data-background-color="red"]
+
+.main-header[data-background-color="red"] {
+	@include main-header-state-style($danger-color);
+	@include navbar-header-state-style($danger-color);
+}

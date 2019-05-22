@@ -1,0 +1,48 @@
+/*     	Task Tab     */
+.tasks-wrapper{
+	.tasks-scroll{
+		height: calc(100vh - 130px);
+		overflow: auto;
+		margin-bottom: 15px;
+	}
+	.tasks-content{
+		padding-bottom: 25px;
+		.tasks-list{
+			padding: 0px 10px;
+			list-style: none;
+			li {
+				position: relative;
+				margin-bottom: 15px;
+				.custom-control{
+					position: unset !important;
+				}
+				input[type="checkbox"]:checked~.custom-control-label {
+					text-decoration: line-through;
+					color: #999;
+				}
+				.custom-control.custom-checkbox {
+					margin-right: 50px !important;
+				}
+				.task-action{
+					display: none;
+					position: absolute;
+					font-size: 17px;
+					right: 0;
+					top: 0;
+					a.link{
+						margin-left: 10px;
+						&:hover{
+							text-decoration: none;
+							color: unset;
+						}
+					}
+				}
+				&:hover {
+					.task-action{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+/*     	Login     */
+.login {
+	background: #efefee;
+	.wrapper{
+		&.wrapper-login {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: unset;
+			padding: 15px;
+			.container-login, .container-signup {
+				width: 400px;
+				background: $white-color;
+				padding: 60px 25px;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+				-moz-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+				box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+				border: 1px solid #ebecec;
+				h3 {
+					font-size: 19px;
+					font-weight: $font-weight-bold;
+					margin-bottom: 25px;				
+				}
+				.form-sub{
+					align-items: center;
+					justify-content: space-between;
+					padding: 8px 10px;
+				}
+				.btn-login{
+					padding: 15px 0;
+					width: 135px;
+				}
+				.form-action {
+					text-align: center;
+					padding: 25px 10px 0;
+				}
+				.form-action-d-flex{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.login-account {
+					padding-top: 10px;
+					text-align: center;
+				}
+			}
+			.container-signup {
+				.form-action {
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+	}
+	.show-password {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.custom-control-label{
+		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: 576px){
+	.form-action-d-flex{
+		flex-direction: column;
+		align-items: start !important;
+	}
+}
+
+@media screen and (max-width: 399px){
+	.wrapper-login {
+		padding: 15px !important;
+	}
+	.container-login{
+		width: 100% !important;
+		padding: 60px 15px !important;
+	}
+}

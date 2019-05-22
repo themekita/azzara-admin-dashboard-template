@@ -1,0 +1,11 @@
+# # Deny access to .htaccess
+# <Files .htaccess>
+# Order allow, deny
+# Deny from all
+# </Files>
+
+# # Disable directory browsing 
+Options -Indexes
+
+# # Hide files of type .png, .zip, .jpg, .gif .doc etc from listing
+IndexIgnore *.png *.zip *.jpg *.gif *.doc *.css *.scss *.js *.jpg *.txt
